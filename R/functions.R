@@ -38,11 +38,6 @@ function(dest.dir, dataset,
 
 
     if (!dir.exists(dest.dir)) {
-        create.dir <- askYesNo(
-            paste(sQuote("dest.dir"), "does not exist. Create it?"),
-            default = FALSE)
-        if (!isTRUE(create.dir))
-            return(invisible(NULL))
         dir.create(dest.dir, recursive = TRUE)
     }
 
